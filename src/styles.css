@@ -1,0 +1,165 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* PPP brand tokens */
+  --color-ppp-void: var(--ppp-void);
+  --color-ppp-abyss: var(--ppp-abyss);
+  --color-ppp-depth: var(--ppp-depth);
+  --color-ppp-surface: var(--ppp-surface);
+  --color-ppp-border: var(--ppp-border);
+  --color-ppp-gold: var(--ppp-gold);
+  --color-ppp-gold-soft: var(--ppp-gold-soft);
+  --color-ppp-text-primary: var(--ppp-text-primary);
+  --color-ppp-text-secondary: var(--ppp-text-secondary);
+  --color-ppp-text-muted: var(--ppp-text-muted);
+
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --animate-ticker-med: ticker-med 38s linear infinite;
+  --animate-shimmer: shimmer 6s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.8s ease-out both;
+}
+
+@keyframes ticker-med {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* shadcn neutrals (kept for components) */
+  --background: oklch(0.08 0.01 80);
+  --foreground: oklch(0.96 0.01 85);
+  --card: oklch(0.12 0.012 80);
+  --card-foreground: oklch(0.96 0.01 85);
+  --popover: oklch(0.12 0.012 80);
+  --popover-foreground: oklch(0.96 0.01 85);
+  --primary: oklch(0.78 0.13 82);
+  --primary-foreground: oklch(0.12 0.01 80);
+  --secondary: oklch(0.18 0.012 80);
+  --secondary-foreground: oklch(0.96 0.01 85);
+  --muted: oklch(0.18 0.012 80);
+  --muted-foreground: oklch(0.7 0.02 80);
+  --accent: oklch(0.78 0.13 82);
+  --accent-foreground: oklch(0.12 0.01 80);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.25 0.015 80 / 60%);
+  --input: oklch(0.25 0.015 80 / 60%);
+  --ring: oklch(0.78 0.13 82);
+
+  /* PPP palette */
+  --ppp-void: oklch(0.07 0.008 75);          /* near-black */
+  --ppp-abyss: oklch(0.1 0.01 78);
+  --ppp-depth: oklch(0.13 0.012 80);
+  --ppp-surface: oklch(0.17 0.014 82);
+  --ppp-border: oklch(0.78 0.13 82 / 18%);
+  --ppp-gold: oklch(0.78 0.13 82);            /* #C9A84C-ish */
+  --ppp-gold-soft: oklch(0.86 0.09 85);
+  --ppp-text-primary: oklch(0.97 0.01 85);
+  --ppp-text-secondary: oklch(0.78 0.015 85);
+  --ppp-text-muted: oklch(0.6 0.015 85);
+
+  --gradient-gold: linear-gradient(135deg, oklch(0.86 0.11 88), oklch(0.7 0.14 75), oklch(0.86 0.11 88));
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.16 0.02 82) 0%, oklch(0.07 0.008 75) 60%);
+  --shadow-gold: 0 10px 40px -10px oklch(0.78 0.13 82 / 35%);
+  --shadow-gold-lg: 0 20px 60px -15px oklch(0.78 0.13 82 / 50%);
+}
+
+.dark {
+  /* same dark theme always */
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--ppp-void);
+    color: var(--ppp-text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+  .font-mono { font-family: var(--font-mono); }
+
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-gold-lg { box-shadow: var(--shadow-gold-lg); }
+
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .card-gold-top {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-gold-top::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ppp-gold), transparent);
+    opacity: 0.6;
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(oklch(0.78 0.13 82 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.78 0.13 82 / 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
