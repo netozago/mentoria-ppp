@@ -1,11 +1,11 @@
 import { Sparkles } from "lucide-react";
 
 const items = [
-  "Já têm formação e querem transformar competência em prosperidade",
-  "Estão cansados de cursos que não conversam com a realidade do consultório",
-  "Querem crescer com base em estratégia, não em sorte ou indicação",
-  "Buscam uma comunidade séria, sem enrolação e sem guru",
-  "Entendem que evolução profissional é um processo, não um evento",
+  "Você tem formação e quer transformar competência em prosperidade",
+  "Está cansado de cursos que não conversam com a realidade do consultório",
+  "Quer crescer com estratégia, não com sorte ou dependendo somente de indicação",
+  "Busca uma comunidade séria, sem fórmulas mágicas e sem guru",
+  "Entende que evolução profissional é um processo, não um evento",
 ];
 
 export function MemberProfileSection() {
@@ -13,7 +13,7 @@ export function MemberProfileSection() {
     <section className="bg-ppp-void">
       <div className="mx-auto max-w-2xl px-6 py-24 text-center md:py-32">
         <h2 className="font-display text-4xl font-bold text-ppp-text-primary">
-          O Programa foi feito para Psicólogos que…
+          O programa é para você se:
         </h2>
 
         <ul className="mt-10 flex flex-col text-left">

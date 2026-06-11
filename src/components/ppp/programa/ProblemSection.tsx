@@ -6,21 +6,22 @@ export function ProblemSection() {
       <div className="mx-auto max-w-2xl px-6 py-24 text-center md:py-32">
         <GoldDivider />
         <h2 className="mt-8 font-display text-3xl font-semibold italic text-ppp-text-primary md:text-4xl">
-          Por que um curso de R$1.000 não resolve?
+          Para quem é o Programa Psicólogo Próspero?
         </h2>
+        <p className="mt-4 font-display text-xl text-ppp-text-primary">
+          Para psicólogos que querem construir carreiras de alto valor, ajudar pessoas e ser bem remunerado por isso.
+        </p>
         <GoldDivider className="mt-8" />
 
         <div className="mt-10 space-y-7 text-left font-body text-lg leading-[1.9] text-ppp-text-secondary md:text-center">
-          <p>
-            Você compra um curso. Assiste com entusiasmo. Tenta aplicar. Esbarra em uma
-            dúvida específica do seu contexto. E não tem ninguém para responder.
+          <p className="font-display italic text-ppp-text-primary text-2xl">
+            O PPP resolve uma carreira.
           </p>
           <p>
-            A psicologia é uma carreira de longo prazo. Posicionamento, agenda,
-            precificação, captação... nada disso se resolve com um treinamento pontual.
+            Você já sabe que precisa de posicionamento, de agenda própria, de independência do plano de saúde. O que falta não é mais informação - é acompanhamento contínuo, com alguém que já fez o caminho e uma comunidade que pensa igual a você.
           </p>
-          <p className="font-display italic text-ppp-text-primary">
-            O que você precisa é de evolução contínua, com alguém que já fez o caminho.
+          <p>
+            E é exatamente isso que eu vou entregar para você através do PPP.
           </p>
         </div>
       </div>

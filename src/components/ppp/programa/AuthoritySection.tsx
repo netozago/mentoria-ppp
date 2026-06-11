@@ -2,16 +2,15 @@ import { PppBadge } from "@/components/ppp/shared/PppBadge";
 import { GoldDivider } from "@/components/ppp/shared/GoldDivider";
 
 const credentials = [
-  { v: "15+", l: "Anos de clínica" },
-  { v: "2.000+", l: "Psicólogos mentorados" },
-  { v: "Brasil/EUA", l: "Atuação internacional" },
+  { v: "8+", l: "Anos de clínica" },
+  { v: "600+", l: "Pacientes atendidos" },
+  { v: "7", l: "Países diferentes" },
 ];
 
 const highlights = [
-  "Psicólogo clínico, mestre e especialista em comportamento humano aplicado à carreira.",
-  "Mentor de psicólogos que faturam de 5 a 6 dígitos mensais com consultórios próprios.",
-  "Palestrante e referência em posicionamento profissional para a área da psicologia.",
-  "Atende clientes no Brasil e nos Estados Unidos, com prática validada em ambos os mercados.",
+  "Psicólogo clínico com atuação no Brasil e nos EUA.",
+  "Referência em posicionamento profissional na área da psicologia.",
+  "Suas falas são referência na imprensa brasileira e portuguesa.",
 ];
 
 export function AuthoritySection() {
@@ -40,16 +39,13 @@ export function AuthoritySection() {
           </div>
 
           <div>
-            <PppBadge>✦ Quem conduz o Programa</PppBadge>
+            <PppBadge>✦ Quem conduz o PPP</PppBadge>
             <h2 className="mt-6 font-display text-4xl font-bold leading-tight text-ppp-text-primary md:text-5xl">
-              <span className="text-gold-gradient">Neto Zago</span>, autoridade em
-              psicologia de alto valor.
+              <span className="text-gold-gradient">Paulo Zago Neto</span>, mais conhecido como Neto Zago
             </h2>
             <p className="mt-6 font-body text-lg leading-relaxed text-ppp-text-secondary">
-              Há mais de uma década formando psicólogos que constroem carreiras
-              sólidas, lucrativas e alinhadas ao próprio propósito. Suas falas sobre
-              relacionamentos, ansiedade e saúde emocional são referência na imprensa
-              brasileira.
+              Psicólogo clínico, mais de 8 anos de clínica, mais de 600 pacientes atendidos em 7 países diferentes.
+              Referência em posicionamento profissional na área da psicologia, com atuação no Brasil e nos EUA. Suas falas sobre carreira, saúde emocional e relacionamentos são referência na imprensa brasileira e portuguesa.
             </p>
 
             <ul className="mt-8 space-y-4">
