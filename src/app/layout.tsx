@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles.css";
 import FacebookPixel from "@/components/FacebookPixel";
 import { FB_PIXEL_ID } from "@/lib/fbpixel";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "PPP - Programa Psicólogo Próspero: Mentoria Contínua para Psicólogos de Alto Valor",
@@ -29,7 +30,9 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         {children}
-        <FacebookPixel />
+        <Suspense fallback={null}>
+          <FacebookPixel />
+        </Suspense>
         <noscript>
           <img
             height="1"
